@@ -9,5 +9,6 @@ public interface EmployeeService {
     public Company addCompany(Company company);
      public Employee addEmployee(Employee employee,Long companyId);
     public List<Employee> getEmployee(Long compId);
+    public Employee updateEmployee(Long employeeId);
 
 }

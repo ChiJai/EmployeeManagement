@@ -28,4 +28,15 @@ public class EmployeeServiceImpl implements EmployeeService  {
         list = employeeRepo.findByCompany(company);
         return list;
     }
+    public Employee updateEmployee(Long employeeId){
+        Employee employee = employeeRepo.findByEmployeeId(employeeId);
+//        employee.setEmployeeId(employee.getEmployeeId());
+//        employee.setGender(employee.getGender());
+//        employee.setJoining(employee.getJoining());
+//        employee.setCompany(employee.getCompany());
+//        employee.setInCompany(employee.getInCompany());
+//        employee.setLeaving(employee.getLeaving());
+        employee.setOutCompany(true);
+        return this.employeeRepo.save(employee);
+    }
 }
